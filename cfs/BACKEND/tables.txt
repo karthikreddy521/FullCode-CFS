@@ -1,0 +1,190 @@
+CREATE TABLE courses
+(
+courseid NUMBER(9)
+CONSTRAINT Courses_courseid_PrimaryKey PRIMARY KEY,
+coursename VARCHAR2(15)
+CONSTRAINT Courses_coursename_NotNull NOT NULL,
+duration NUMBER(5)
+CONSTRAINT Courses_duration_NotNull NOT NULL,
+noofbranches NUMBER(5)
+CONSTRAINT Courses_noofbranches_NotNull NOT NULL
+);
+
+CREATE TABLE branches
+(
+courseid NUMBER(9)
+CONSTRAINT Courses_courseid_ForienKey 
+REFERENCES courses(courseid) ON DELETE CASCADE,
+branchid NUMBER(9)
+CONSTRAINT branches_branchid_PrimaryKey PRIMARY KEY,
+branchname VARCHAR2(20)
+CONSTRAINT branches_branchname_NotNull NOT NULL,
+year NUMBER(4)
+CONSTRAINT branches_year_NotNull NOT NULL
+);
+
+CREATE TABLE sections
+(
+branchid NUMBER(9)
+CONSTRAINT sections_branchid_ForienKey
+REFERENCES branches(branchid) ON DELETE CASCADE,
+sectionid NUMBER(9)
+CONSTRAINT sections_sectionid_PrimaryKey PRIMARY KEY,
+section VARCHAR2(9)
+CONSTRAINT sections_section_NotNull NOT NULL
+);
+
+CREATE TABLE subjects
+(
+branchid NUMBER(9)
+CONSTRAINT subjects_branchid_ForienKey
+REFERENCES branches(branchid) ON DELETE CASCADE,
+subjectid NUMBER(9)
+CONSTRAINT subjects_subjectid_Primarykey PRIMARY KEY,
+subject VARCHAR2(20)
+CONSTRAINT subjects_subject_NotNull NOT NULL
+);
+
+CREATE TABLE admin
+(
+userid VARCHAR2(30)
+CONSTRAINT admin_userid_Primarykey PRIMARY KEY,
+password VARCHAR2(30)
+CONSTRAINT admin_password_NotNull NOT NULL
+);
+
+CREATE TABLE students
+(
+sectionid NUMBER(9)
+CONSTRAINT students_sectionid_forienkey 
+REFERENCES sections(sectionid) ON DELETE CASCADE,
+studentid VARCHAR2(15)
+CONSTRAINT students_studentid_PrimaryKey PRIMARY KEY,
+password VARCHAR2(20)
+CONSTRAINT students_password_NotNull NOT NULL,
+name VARCHAR2(30)
+CONSTRAINT students_name_NotNull NOT NULL
+);
+
+
+
+CREATE TABLE faculityfeedback
+(
+studentid VARCHAR2(15)
+CONSTRAINT facfeedback_stdid_forienKey
+REFERENCES students(studentid) ON DELETE CASCADE,
+dateTaken Date 
+CONSTRAINT facfeedback_datetkn_NotNull NOT NULL,
+subjectid NUMBER(9)
+CONSTRAINT facfeedback_subid_forienKey
+REFERENCES subjects(subjectid) ON DELETE CASCADE,
+feature1 VARCHAR2(4)
+CONSTRAINT facfeedback_fea1_NotNull NOT NULL,
+feature2 VARCHAR2(4)
+CONSTRAINT facfeedback_fea2_NotNull NOT NULL,
+feature3 VARCHAR2(4)
+CONSTRAINT facfeedback_fea3_NotNull NOT NULL,
+feature4 VARCHAR2(4)
+CONSTRAINT facfeedback_fea4_NotNull NOT NULL,
+feature5 VARCHAR2(4)
+CONSTRAINT facfeedback_fea5_NotNull NOT NULL,
+feature6 VARCHAR2(4)
+CONSTRAINT facfeedback_fea6_NotNull NOT NULL,
+feature7 VARCHAR2(4)
+CONSTRAINT facfeedback_fea7_NotNull NOT NULL,
+feature8 VARCHAR2(4)
+CONSTRAINT facfeedback_fea8_NotNull NOT NULL,
+feature9 VARCHAR2(4)
+CONSTRAINT facfeedback_fea9_NotNull NOT NULL,
+feature10 VARCHAR2(4)
+CONSTRAINT facfeedback_fea10_NotNull NOT NULL,
+feature11 VARCHAR2(4)
+CONSTRAINT facfeedback_fea11_NotNull NOT NULL,
+feature12 VARCHAR2(4)
+CONSTRAINT facfeedback_fea12_NotNull NOT NULL,
+feature13 VARCHAR2(4)
+CONSTRAINT facfeedback_fea13_NotNull NOT NULL,
+feature14 VARCHAR2(4)
+CONSTRAINT facfeedback_fea14_NotNull NOT NULL,
+feature15 VARCHAR2(4)
+CONSTRAINT facfeedback_fea15_NotNull NOT NULL
+);
+
+CREATE TABLE collegefeedback
+(
+studentid VARCHAR2(15)
+CONSTRAINT collfeedback_sid_forienKey
+REFERENCES students(studentid) ON DELETE CASCADE,
+dateTaken Date 
+CONSTRAINT collfeedback_datetkn_NotNull NOT NULL,
+feature1 VARCHAR2(4)
+CONSTRAINT collfeedback_fea1_NotNull NOT NULL,
+feature2 VARCHAR2(4)
+CONSTRAINT collfeedback_fea2_NotNull NOT NULL,
+feature3 VARCHAR2(4)
+CONSTRAINT collfeedback_fea3_NotNull NOT NULL,
+feature4 VARCHAR2(4)
+CONSTRAINT collfeedback_fea4_NotNull NOT NULL,
+feature5 VARCHAR2(4)
+CONSTRAINT collfeedback_fea5_NotNull NOT NULL,
+feature6 VARCHAR2(4)
+CONSTRAINT collfeedback_fea6_NotNull NOT NULL,
+feature7 VARCHAR2(4)
+CONSTRAINT collfeedback_fea7_NotNull NOT NULL,
+feature8 VARCHAR2(4)
+CONSTRAINT collfeedback_fea8_NotNull NOT NULL,
+feature9 VARCHAR2(4)
+CONSTRAINT collfeedback_fea9_NotNull NOT NULL,
+feature10 VARCHAR2(4)
+CONSTRAINT collfeedback_fea10_NotNull NOT NULL
+);
+
+
+Create SEQUENCE courseIdSequence
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+MINVALUE 1
+NOCYCLE
+NOCACHE
+ORDER;
+
+Create SEQUENCE branchIdSequence
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+MINVALUE 1
+NOCYCLE
+NOCACHE
+ORDER;
+
+Create SEQUENCE sectionIdSequence
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+MINVALUE 1
+NOCYCLE
+NOCACHE
+ORDER;
+
+
+
+
+Create SEQUENCE subjectIdSequence
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+MINVALUE 1
+NOCYCLE
+NOCACHE
+ORDER;
+
+CREATE TABLE studentDetails
+(
+Studentid VARCHAR2(20),
+contactNumber Number(20),
+mailid VARCHAR2(40)
+)
+
+
+commit;

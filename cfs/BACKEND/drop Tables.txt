@@ -1,0 +1,17 @@
+drop TABLE admin;
+drop TABLE students;
+drop TABLE collegefeedback;
+drop TABLE faculityfeedback;
+
+drop TABLE subjects;
+drop TABLE sections;
+drop TABLE branches;
+drop TABLE courses;
+
+drop SEQUENCE courseIdSequence;
+drop SEQUENCE branchIdSequence;
+drop SEQUENCE sectionIdSequence;
+
+drop SEQUENCE subjectIdSequence;
+drop SEQUENCE feedbackIdSequence;
+commit;

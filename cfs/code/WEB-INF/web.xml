@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  
+  <context-param>
+  <param-name>CollegeFeature1</param-name>
+  <param-value>ADministration</param-value>
+  </context-param>
+  <context-param>
+  <param-name>CollegeFeature2</param-name>
+  <param-value>Library</param-value>
+  </context-param>
+  <context-param>
+  <param-name>CollegeFeature3</param-name>
+  <param-value>Sports</param-value>
+  </context-param>
+  <context-param>
+  <param-name>CollegeFeature4</param-name>
+  <param-value>Transportation</param-value>
+  </context-param>
+  <context-param>
+  <param-name>CollegeFeature5</param-name>
+  <param-value>Canteen</param-value>
+  </context-param>
+  <context-param>
+  <param-name>CollegeFeature6</param-name>
+  <param-value>DrinkingWater</param-value>
+  </context-param>
+  <context-param>
+  <param-name>CollegeFeature7</param-name>
+  <param-value>Labortories</param-value>
+  </context-param>
+  <context-param>
+  <param-name>CollegeFeature8</param-name>
+  <param-value>ClassRooms</param-value>
+  </context-param>
+  <context-param>
+  <param-name>CollegeFeature9</param-name>
+  <param-value>SeminarHalls</param-value>
+  </context-param>
+  <context-param>
+  <param-name>CollegeFeature10</param-name>
+  <param-value>R and D</param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature1</param-name>
+  <param-value>Does he announces the aim and importance of a subject/Course for study?</param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature2</param-name>
+  <param-value>Does he have full knowledge about the subject/Course handle?</param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature3</param-name>
+  <param-value>Does he make the necessary preparation before conducting class </param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature4</param-name>
+  <param-value>Does he teach in datail every topic of the course?</param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature5</param-name>
+  <param-value>Does he teach the subject as per the syllabus prescribed by the university</param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature6</param-name>
+  <param-value>Does he match his course syllabus coverage uniformally with time schedule and allot sufficent duration for each topic?</param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature7</param-name>
+  <param-value>Does he encourage the student to ask questions and entertain student questions during class?</param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature8</param-name>
+  <param-value>Does he take classes regularly and consume class hours comleately with topic discussion? With out bringing unrelated matters </param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature9</param-name>
+  <param-value>Ability to control the descipline among the students in lecture hall? </param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature10</param-name>
+  <param-value>Voice is audible or not?</param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature11</param-name>
+  <param-value>Whether he attend the lab during the lab period? </param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature12</param-name>
+  <param-value>How he explains in the lab?</param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature13</param-name>
+  <param-value>How or the systems working?</param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature14</param-name>
+  <param-value>Required software to do the lab are installed or not?</param-value>
+  </context-param>
+  <context-param>
+  <param-name>FaculityFeature15</param-name>
+  <param-value>Whether he suggests the books to be follwed?</param-value>
+  </context-param>
+    
+</web-app>

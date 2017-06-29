@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	background-color:#A6CAF0;
+}
+font
+{
+	color:#FF9999;
+	
+}
+table
+{
+ 
+ border-color:#0FC;
+
+}
+caption
+{
+	font:oblique;
+	color:#630;
+	border-bottom:#9F3;
+	border-color:#C69;
+}
+input
+{
+	border:#FF9;
+	border-collapse:collapse;
+	font-stretch:expanded;
+}
